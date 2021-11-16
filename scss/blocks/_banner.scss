@@ -1,0 +1,31 @@
+.banner {
+    // height: 760.99px;
+    background-image: url(../images/bg_banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 101px;
+    margin-top: 59.17px;
+    // &__wrap {
+    // }
+    &__title {
+        font-family: 'Merriweather', serif;
+        font-size: 55px;
+        line-height: 100%;
+        max-width: 360px;
+        margin-bottom: 159px;
+    }
+    &__btn {
+        display: flex;
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+    &__link {
+        align-self: center;
+        font-size: 18px;
+        line-height: 21px;
+        text-decoration-line: underline;
+        color: #590D56;
+        margin-left: 29.5px;
+    }
+}
