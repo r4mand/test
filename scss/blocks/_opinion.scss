@@ -1,0 +1,41 @@
+.opinion {
+    &__wrap {
+        display: flex;
+    }
+    &__content {
+        flex: 0 1 240px;
+        margin-right: 53px;
+        &>h4 {
+            font-family: Merriweather;
+            font-size: 30px;
+            line-height: 120%;
+            color: #000000;
+            margin-bottom: 26px;
+        }
+        &>p {
+            font-size: 16px;
+            line-height: 154.8%;
+            color: #777777;
+        }
+    }
+    &__box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 8px;
+        .play {
+            position: absolute;
+            top: 256px;
+            right: 389px;
+            z-index: 2;
+        }
+    }
+    &__btn {
+        display: flex;
+        gap: 16px;
+        .btn:hover {
+            fill: #590D56;
+        }
+    }
+}
