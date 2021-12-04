@@ -1,0 +1,38 @@
+.shop {
+    background: linear-gradient(360deg, rgba(71, 9, 62, 0.5) -7.14%, rgba(255, 255, 255, 0) 100%);
+    background-blend-mode: multiply;
+    background-size: 100% 10%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 94px;
+    &__wrap {
+        display: flex;
+    }
+    &__content {
+        flex: 0 1 263px;
+        margin-right: 29px;
+        &>h6 {
+            @include title;
+            margin-bottom: 26px;
+        }
+        &>p {
+            @include text;
+        }
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+    }
+    &__img {
+        position: relative;
+        flex-basis: 436px;
+        &>img {
+            position: absolute;
+            right: 112px;
+        }
+    }
+    &__buttons {
+        display: flex;
+        gap: 30px;
+    }
+}

@@ -1,4 +1,6 @@
 header {
+    position: relative;
+    z-index: 2;
     .header {
         &__wrap {
             display: flex;
@@ -9,6 +11,8 @@ header {
         }
         &__right {
             display: flex;
+            position: relative;
+            flex-direction: row-reverse;
             .search {
                 margin-top: 28px;
                 margin-right: 58.46px;
@@ -17,9 +21,86 @@ header {
                 margin-top: 28px;
                 margin-right: 44.09px;
             }
-            .burger__menu {
-                margin-top: 32.17px;
-            }
         }
+        &__nav {
+            position: absolute;
+            top: 77px;
+            right: -150px;
+            z-index: 10;
+            transition: ease-in-out .5s;
+        }
+        &__menu {
+            margin-top: 32.17px;
+            cursor: pointer;
+        }
+    }
+}
+
+.nav {
+    width: 1440px;
+    background-color: #fff;
+    padding: 154px 0 142px 150px;
+    &__wrap {
+        position: relative;
+    }
+    &__close {
+        position: absolute;
+        top: -183px;
+        right: 152px;
+        cursor: pointer;
+    }
+    &__item {
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 91px;
+        }
+    }
+    &__text {
+        font-family: Merriweather;
+        font-size: 16px;
+        line-height: 100%;
+        color: #000000;
+        cursor: pointer;
+        &:hover {
+            color: #771373;
+        }
+    }
+    &__line-1 {
+        position: absolute;
+        left: -150px;
+        bottom: -63px;
+    }
+    &__lines-2 {
+        position: absolute;
+        left: -150px;
+        top: 55px;
+    }
+    &__lines-3 {
+        position: absolute;
+        left: -150px;
+        bottom: -80px;
+    }
+}
+
+#burger {
+    display: none;
+    &:checked {
+        &~.header__nav {
+            visibility: visible;
+            opacity: 1;
+            transition: .5s;
+        }
+        &~.header__menu {
+            visibility: hidden;
+        }
+        &~.search,
+        &~.shops {
+            display: none;
+        }
+    }
+    &:not(:checked)~.header__nav {
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
     }
 }

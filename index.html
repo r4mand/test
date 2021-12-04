@@ -10,7 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/swiper@7.3.1/swiper-bundle.min.css">
+
     <script src="https://kit.fontawesome.com/c34be4dd92.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@7.3.1/swiper-bundle.min.js"></script>
+    <script src="js/all.js"></script>
+
 </head>
 
 <body>
@@ -22,14 +27,57 @@
                 </a>
             </div>
             <div class="header__right">
+                <input id="burger" type="checkbox">
+                <label class="header__menu" for="burger"><svg width="68" height="45" viewBox="0 0 68 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 4.4837C6.3473 2.88065 14.9897 1.17301 21.32 2.8695C30.8501 5.4235 38.9139 13.6762 52.957 11.1048C58.5783 10.0755 63.3366 8.24065 67 6.36585" stroke="#47093E" stroke-width="3"/>
+                    <path d="M1 20.1028C6.3473 18.4998 14.9897 16.7922 21.32 18.4886C30.8501 21.0426 38.9139 29.2954 52.957 26.724C58.5783 25.6947 63.3366 23.8598 67 21.985" stroke="#47093E" stroke-width="3"/>
+                    <path d="M1 35.7217C6.3473 34.1187 14.9897 32.411 21.32 34.1075C30.8501 36.6615 38.9139 44.9143 52.957 42.3429C58.5783 41.3136 63.3366 39.4787 67 37.6039" stroke="#47093E" stroke-width="3"/>
+                    </svg></label>
+
+                <nav class=" header__nav nav">
+                    <div class="nav__wrap">
+                        <label class="nav__close" for="burger"><svg width="68" height="13" viewBox="0 0 68 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 4.31695C6.3473 2.7139 14.9897 1.00626 21.32 2.70275C30.8501 5.25675 38.9139 13.5095 52.957 10.9381C58.5783 9.9088 63.3366 8.0739 67 6.19911" stroke="#47093E" stroke-width="3"/>
+                            </svg></label>
+                        <ul class="nav__items">
+                            <li class="nav__item">
+                                <p class="nav__text">Где купить</p>
+                                <svg class="nav__line-1" width="1440" height="233" viewBox="0 0 1440 233" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 175.235C116.668 214.509 305.231 256.347 443.346 214.783C651.274 152.21 827.213 -49.9822 1133.61 13.0165C1256.25 38.2344 1360.07 83.1894 1440 129.122" stroke="#590D56"/>
+                                    </svg>
+                            </li>
+                            <li class="nav__item">
+                                <p class="nav__text">О препарате</p>
+                                <svg class="nav__lines-2" width="1440" height="135" viewBox="0 0 1440 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 12.0582C116.668 4.40727 305.231 -3.74284 443.346 4.35402C651.274 16.5436 827.213 55.9316 1133.61 43.6591C1256.25 38.7465 1360.07 29.9891 1440 21.0412" stroke="#590D56"/>
+                                    <path d="M0 103.529C116.668 124.611 305.231 147.069 443.346 124.758C651.274 91.1688 827.213 -17.3671 1133.61 16.4504C1256.25 29.9873 1360.07 54.119 1440 78.7754" stroke="#590D56"/>
+                                    </svg>
+                            </li>
+                            <li class="nav__item">
+                                <p class="nav__text">О варикозе</p>
+                            </li>
+                            <li class="nav__item">
+                                <p class="nav__text">Решение</p>
+                            </li>
+                            <li class="nav__item">
+                                <p class="nav__text">Специалистам</p>
+                                <svg class="nav__lines-3" width="1440" height="158" viewBox="0 0 1440 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 120.29C116.668 131.851 305.231 144.167 443.346 131.932C651.274 113.512 827.213 53.9923 1133.61 72.5373C1256.25 79.9608 1360.07 93.1943 1440 106.716" stroke="#590D56"/>
+                                    <path d="M0 39.335C116.668 12.8119 305.231 -15.4418 443.346 12.6273C651.274 54.8844 827.213 191.43 1133.61 148.885C1256.25 131.855 1360.07 101.495 1440 70.4761" stroke="#590D56"/>
+                                    </svg>
+                            </li>
+                            <li class="nav__item">
+                                <p class="nav__text">Геморрой</p>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
                 <div class="search">
                     <img src="icons/search.svg" alt="Поиск">
                 </div>
                 <div class="shops">
                     <img src="icons/shops.svg" alt="Где купить">
-                </div>
-                <div class="burger__menu">
-                    <img src="icons/menu.svg" alt="Меню">
                 </div>
             </div>
         </div>
@@ -38,8 +86,11 @@
     <main>
         <section class="banner">
             <div class="container banner__wrap">
-                <div class="banner__left">
-                    <h1 class="banner__title">НАДЕЖНЫЙ ПОМОЩНИК В ЛЕЧЕНИИ ВАРИКОЗА</h1>
+                <div class="banner__img">
+                    <img src="images/bg_banner.png" alt="">
+                </div>
+                <div class="banner__content">
+                    <h1 class="banner__title">Надежный помощник в лечении варикоза</h1>
                     <div class="banner__buttons">
                         <div class="banner__btn">
                             <img src="icons/play.svg" alt="Схема приема">
@@ -55,12 +106,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="banner__right">
-                    <div class="slider">
-
+                <div class="banner__slider">
+                    <div class="slider__img">
+                        <img src="images/pills__banner.png" alt="">
+                    </div>
+                    <div class="slider__buttons">
+                        <div class="arrows">
+                            <svg width="68" height="69" viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="33.9999" cy="34.0074" r="33.4999" transform="rotate(-180 33.9999 34.0074)" stroke="white"/>
+                            <path d="M38.0796 20.4073L24.4796 34.0073L38.0796 47.6072" stroke="white"/>
+                            </svg>
+                            <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="34.0002" cy="34" r="33.5" stroke="white"/>
+                            <path d="M29.9203 47.5999L43.5203 33.9999L29.9203 20.3999" stroke="white"/>
+                            </svg>
+                        </div>
+                        <a href="#" class="btn btn-white">Где купить ></a>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="marquee">
+            <p class="marquee__text"><span>получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>> получить скидку 10% >>></span></p>
         </section>
 
         <section class="about">
@@ -77,12 +145,14 @@
                     <div class="about__top__group">
                         <img src="icons/pill.svg" alt="pill">
                         <p>Удобный прием. Одна таблетка в сутки*</p>
-                        <!-- <div class="info">
-                            <img class="info__img" src="icons/info.svg" alt="info">
-                        </div> -->
+
                     </div>
-
-
+                    <span class="info">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="15" cy="15" r="14.5" stroke="#47093E"/>
+                            <path d="M14.624 10.648C14.24 10.648 13.936 10.536 13.712 10.312C13.488 10.088 13.376 9.8 13.376 9.448C13.376 9.04267 13.504 8.70667 13.76 8.44C14.016 8.17333 14.3573 8.04 14.784 8.04C15.2107 8.04 15.536 8.15733 15.76 8.392C15.984 8.616 16.096 8.89867 16.096 9.24C16.096 9.66667 15.968 10.008 15.712 10.264C15.456 10.52 15.0987 10.648 14.64 10.648H14.624ZM13.776 13.624L12.64 13.32V12.248L15.568 11.896H15.6L16.048 12.216V19.912L17.12 20.04V21H12.656V20.04L13.776 19.896V13.624Z" fill="#47093E"/>
+                            </svg>
+                    </span>
                 </div>
 
                 <div class="about__bottom">
@@ -149,11 +219,14 @@
 
         <section class="process">
             <div class="container process__wrap">
+                <div class="process__img">
+                    <img src="images/process_bg.png" alt="">
+                </div>
                 <div class="process__content">
                     <h3>О производстве Венарус</h3>
                 </div>
                 <div class="process__slider">
-                    <div class="slider__top">
+                    <div class="slider">
                         <img src="images/process_2.png" alt="">
                         <img class="second" src="images/process_1.png" alt="">
                         <svg class="play" width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +234,7 @@
                             <path d="M25.96 20.4403L48.58 33.4999L25.96 46.5596L25.96 20.4403Z" stroke="#47093E"/>
                             </svg>
 
-                        <div class="slider__btn">
+                        <div class="slider__buttons">
                             <svg class="arrow__left" width="68" height="69" viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="33.9999" cy="34.0074" r="33.4999" transform="rotate(-180 33.9999 34.0074)" stroke="white"/>
                                 <path d="M38.0796 20.4073L24.4796 34.0073L38.0796 47.6072" stroke="white"/>
@@ -172,10 +245,7 @@
                                 </svg>
                         </div>
                     </div>
-
-                    <div class="slider__bottom">
-                        <a href="#">Подробнее ></a>
-                    </div>
+                    <a class="btn btn-white" href="#">Подробнее ></a>
                 </div>
             </div>
         </section>
@@ -192,43 +262,69 @@
                         <circle cx="33.5" cy="33.5" r="33" stroke="#47093E"/>
                         <path d="M25.96 20.4403L48.58 33.4999L25.96 46.5596L25.96 20.4403Z" stroke="#47093E"/>
                         </svg>
-                    <div class="opinion__btn">
-                        <svg class="btn" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="opinion__buttons">
+                        <svg class="btn-mini" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle r="7.5" transform="matrix(1 0 0 -1 8 8)" stroke="#47093E"/>
                             </svg>
-                        <svg class="btn" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="btn-mini" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle r="7.5" transform="matrix(1 0 0 -1 8 8)" stroke="#47093E"/>
                             </svg>
-                        <svg class="btn" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="btn-mini" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle r="7.5" transform="matrix(1 0 0 -1 8 8)" stroke="#47093E"/>
                             </svg>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- <section class="blog">
+
+        <section class="blog">
             <div class="container blog__wrap">
+                <div class="blog__img">
+                    <img src="images/blog_bg.png" alt="">
+                </div>
                 <div class="blog__content">
                     <h5>Полезная информация</h5>
                     <p>ВЕНАРУС — надежный помощник в лечении варикоза, хранитель женских ног на пути к ее мечте!</p>
                 </div>
 
-                <div class="blog__box">
-                    <div class="blog__item blog__item--sport">
-                        <p>Профилак- тические упражнения</p>
+                <div class="blog__grid">
+                    <div class="grid__box">
+                        <div class="grid__item grid__item-1">
+                            <p>Профилак- тические упражнения</p>
+                        </div>
+                        <div class="grid__item grid__item-2">
+                            <p>Диагностика и способы лечения</p>
+                        </div>
+                        <div class="grid__item grid__item-3">
+                            <p>Рекомен- дации по питанию </p>
+                        </div>
+                        <div class="grid__item grid__item-4">
+                            <p>Факты о варикозе</p>
+                        </div>
                     </div>
-                    <div class="blog__item blog__item--doc">
-                        <p>Диагностика и способы лечения</p>
+                    <a class="btn btn-purple" href="#">Подробнее ></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop">
+            <div class="container shop__wrap">
+                <div class="shop__content">
+                    <h6>Где купить</h6>
+                    <p>Ветонизирующее средство ВЕНАРУС вы можете приобрести в аптеках вашего города</p>
+                </div>
+                <div class="shop__box">
+                    <div class="shop__img">
+                        <img src="images/pills.png" alt="">
                     </div>
-                    <div class="blog__item blog__item--food">
-                        <p>Рекомен- дации по питанию </p>
-                    </div>
-                    <div class="blog__item blog__item--bg">
-                        <p>Факты о варикозе</p>
+                    <div class="shop__buttons">
+                        <a href="#" class="btn btn-purple">apteka.ru</a>
+                        <a href="#" class="btn btn-purple">366.ru</a>
+                        <a href="#" class="btn btn-purple">stolichki.ru</a>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
     </main>
 
     <footer>
@@ -270,8 +366,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </footer>
 </body>

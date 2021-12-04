@@ -1,10 +1,13 @@
-@import 'variables';
+@import 'mixins';
 @import 'normalize';
 @import 'components/container';
+@import 'components/buttons';
 @import 'blocks/header';
 @import 'blocks/footer';
 @import 'blocks/banner';
+@import 'blocks/marquee';
 @import 'blocks/about';
 @import 'blocks/process';
 @import 'blocks/opinion';
+@import 'blocks/shop';
 @import 'blocks/blog';

@@ -1,11 +1,12 @@
 .about {
     padding-top: 103px;
     &__top {
+        position: relative;
         display: flex;
         margin-bottom: 128px;
         &__group {
             display: flex;
-            &:not(:last-child) {
+            &:not(:nth-child(3)) {
                 margin-right: 128px;
             }
             &>p {
@@ -20,6 +21,11 @@
                 }
             }
         }
+        .info {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        }
     }
     &__bottom {
         display: flex;
@@ -28,16 +34,11 @@
     &__content {
         flex: 0 1 263px;
         &>h2 {
-            font-family: Merriweather;
-            font-size: 30px;
-            line-height: 120%;
-            color: #000000;
+            @include title;
             margin-bottom: 38px;
         }
         &>p {
-            font-size: 16px;
-            line-height: 154.8%;
-            color: #777777;
+            @include text;
         }
     }
     &__box {

@@ -1,56 +1,69 @@
 .blog {
-    background-image: url(../images/blog_bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    margin-bottom: 150px;
     &__wrap {
         display: flex;
+        position: relative;
         padding-top: 237px;
+    }
+    &__img {
+        position: absolute;
+        left: -150px;
+        top: -21px;
+        z-index: -1;
     }
     &__content {
         flex: 0 1 263px;
-        margin-top: 237px;
+        z-index: 2;
+        margin-right: 29px;
         &>h5 {
-            font-family: Merriweather;
-            font-size: 30px;
-            line-height: 120%;
-            color: #000000;
+            @include title;
             margin-bottom: 26px;
         }
         &>p {
-            font-size: 16px;
-            line-height: 154.8%;
+            @include text;
             color: #FFFFFF;
         }
     }
-    &__box {
-        gap: 29px;
+    &__grid {
         display: flex;
-    }
-    &__item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &>p {
-            font-weight: 300;
-            font-size: 36px;
-            line-height: 100%;
-            color: #FFFFFF;
-        }
-        &--sport {
-            background: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url(../images/sport.jpg);
-            padding: 29.04px 17px 148px 28px;
-        }
-        &--doc {
-            background: linear-gradient(180.79deg, rgba(71, 9, 62, 0.8) 0.68%, rgba(71, 9, 62, 0) 99.32%), url(../images/doc.jpg);
-            padding: 24px 24px 20.46px 21px;
-        }
-        &--food {
-            background: linear-gradient(180.68deg, rgba(71, 9, 62, 0.9) 0.59%, rgba(71, 9, 62, 0) 99.41%), url(../images/food.jpg);
-            padding: 24px 17px 20.46px 28px;
-        }
-        &--bg {
-            background: #47093E;
-            padding: 31px 293px 23.12px 21px;
+        flex-direction: column;
+        .grid {
+            &__box {
+                z-index: 2;
+                display: grid;
+                gap: 29px;
+                grid-template-columns: repeat(3, 263px);
+                grid-template-rows: 263px 165px;
+                margin-bottom: 35.99px;
+            }
+            &__item {
+                &>p {
+                    font-weight: 300;
+                    font-size: 36px;
+                    line-height: 100%;
+                    color: #FFFFFF;
+                }
+                &-1 {
+                    background: linear-gradient(179.96deg, rgba(71, 9, 62, 0.9) -0.95%, rgba(71, 9, 62, 0) 99.97%), url(../images/sport.jpg);
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                    padding: 29.04px 17px 147.99px 28px;
+                }
+                &-2 {
+                    background: linear-gradient(180.79deg, rgba(71, 9, 62, 0.8) 0.68%, rgba(71, 9, 62, 0) 99.32%), url(../images/doc.jpg);
+                    padding: 24px 24px 20.46px 21px;
+                }
+                &-3 {
+                    background: linear-gradient(180.68deg, rgba(71, 9, 62, 0.9) 0.59%, rgba(71, 9, 62, 0) 99.41%), url(../images/food.jpg);
+                    padding: 24px 17px 20.46px 28px;
+                }
+                &-4 {
+                    background: #47093E;
+                    grid-column-start: 2;
+                    grid-column-end: 4;
+                    padding: 31.1px 293px 23.12px 21px;
+                }
+            }
         }
     }
 }

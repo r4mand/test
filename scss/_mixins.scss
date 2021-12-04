@@ -1,0 +1,12 @@
+@mixin title {
+    font-family: Merriweather;
+    font-size: 30px;
+    line-height: 120%;
+    color: #000000;
+}
+
+@mixin text {
+    font-size: 16px;
+    line-height: 154.8%;
+    color: #777777;
+}
