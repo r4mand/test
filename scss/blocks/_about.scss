@@ -101,3 +101,9 @@
         margin-bottom: 32px;
     }
 }
+
+@media (max-width: 320px) {
+    .about {
+        display: none;
+    }
+}

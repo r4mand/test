@@ -67,3 +67,9 @@
         }
     }
 }
+
+@media (max-width: 320px) {
+    .blog {
+        display: none;
+    }
+}

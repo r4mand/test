@@ -1,6 +1,6 @@
 .banner {
-    margin-bottom: 151.65px;
     margin-top: 67px;
+    margin-bottom: 151.65px;
     &__wrap {
         position: relative;
         display: flex;
@@ -55,6 +55,44 @@
                 .arrows {
                     display: flex;
                     gap: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .banner {
+        margin-top: 30px;
+        margin-bottom: 21px;
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+        }
+        &__img {
+            top: 43px;
+            left: 0;
+        }
+        &__title {
+            font-size: 45px;
+            line-height: 90%;
+            margin-bottom: 12px;
+        }
+        &__buttons {
+            display: none;
+        }
+        &__slider {
+            .slider {
+                &__img {
+                    top: -180px;
+                    left: -14px;
+                }
+                &__buttons {
+                    gap: 15px;
+                    margin: 40px 0 0 78px;
+                    .arrows {
+                        gap: 15px;
+                    }
                 }
             }
         }

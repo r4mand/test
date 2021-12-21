@@ -61,22 +61,26 @@ header {
         line-height: 100%;
         color: #000000;
         cursor: pointer;
+        z-index: 11;
         &:hover {
             color: #771373;
         }
     }
     &__line-1 {
         position: absolute;
+        z-index: -1;
         left: -150px;
         bottom: -63px;
     }
     &__lines-2 {
         position: absolute;
+        z-index: -1;
         left: -150px;
         top: 55px;
     }
     &__lines-3 {
         position: absolute;
+        z-index: -1;
         left: -150px;
         bottom: -80px;
     }
@@ -90,17 +94,56 @@ header {
             opacity: 1;
             transition: .5s;
         }
-        &~.header__menu {
-            visibility: hidden;
-        }
+        &~.header__menu,
         &~.search,
         &~.shops {
-            display: none;
+            visibility: hidden;
         }
     }
     &:not(:checked)~.header__nav {
         visibility: hidden;
         opacity: 0;
         transition: .5s;
+    }
+}
+
+@media (max-width: 320px) {
+    header {
+        .header {
+            &__left {
+                margin-top: 16px;
+            }
+            &__right {
+                .search {
+                    margin-top: 18.65px;
+                    margin-right: 9.45px;
+                }
+                .shops {
+                    margin-top: 18.65px;
+                    margin-right: 13.9px;
+                }
+            }
+            &__nav {
+                top: 75px;
+            }
+            &__menu {
+                margin-top: 20.73px;
+            }
+        }
+    }
+    .nav {
+        display: none;
+        &__close {
+            top: -203px;
+        }
+    }
+    #burger {
+        &:checked {
+            &~.header__menu,
+            &~.search,
+            &~.shops {
+                visibility: visible;
+            }
+        }
     }
 }

@@ -37,3 +37,9 @@
         }
     }
 }
+
+@media (max-width: 320px) {
+    .opinion {
+        display: none;
+    }
+}

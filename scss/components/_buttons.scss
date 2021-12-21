@@ -22,3 +22,19 @@
         }
     }
 }
+
+@media (max-width: 320px) {
+    .btn {
+        font-size: 14px;
+        line-height: 16px;
+        color: #5B0E58;
+        border: 1px solid #5B0E58;
+        min-width: 132px;
+        padding: 10.51px 0 7.49px 0;
+        &:hover {
+            background: #590D56;
+            border-radius: 90px;
+            color: #fff;
+        }
+    }
+}

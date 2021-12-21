@@ -29,3 +29,9 @@
         transform: translate(-100%, 0)
     }
 }
+
+@media (max-width: 320px) {
+    .marquee {
+        display: none;
+    }
+}

@@ -36,3 +36,9 @@
         gap: 30px;
     }
 }
+
+@media (max-width: 320px) {
+    .shop {
+        display: none;
+    }
+}

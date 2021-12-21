@@ -52,3 +52,9 @@
         }
     }
 }
+
+@media (max-width: 320px) {
+    .process {
+        display: none;
+    }
+}
