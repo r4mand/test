@@ -1,0 +1,114 @@
+.features {
+    padding-top: 103px;
+    &__top {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        min-height: 195px;
+        align-items: flex-start;
+        &__group {
+            display: flex;
+            &:not(:nth-child(3)) {
+                max-width: 262px;
+            }
+            &:nth-child(3) {
+                max-width: 360px;
+            }
+            & > p {
+                font-family: Merriweather;
+                font-size: 16px;
+                line-height: 154.8%;
+                color: #242424;
+                align-self: center;
+                margin-left: 30px;
+                &:not(:last-child) {
+                    max-width: 166px;
+                }
+            }
+        }
+        .info {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        }
+    }
+    &__bottom {
+        display: flex;
+        gap: 73px;
+    }
+    &__content {
+        flex: 0 1 263px;
+        & > h2 {
+            @include title;
+            margin-bottom: 38px;
+        }
+        & > p {
+            @include text;
+        }
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        & > .features__group {
+            &:first-child > svg {
+                top: 13px;
+                left: 118px;
+            }
+            &:last-child > svg {
+                top: 70px;
+                left: 125px;
+            }
+        }
+    }
+    &__group {
+        position: relative;
+        display: flex;
+        flex-basis: 194px;
+        gap: 186px;
+        border-top: 1px solid #47093e;
+        &:last-child {
+            border-bottom: 1px solid #47093e;
+        }
+        & > svg {
+            position: absolute;
+        }
+        .second {
+            top: 35px;
+            right: 0;
+        }
+        .third {
+            bottom: 81px;
+            left: 51px;
+        }
+        .fourth {
+            top: 82px;
+            right: 42px;
+            z-index: 1;
+        }
+        & > p {
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 100%;
+            align-self: center;
+            color: #000000;
+            flex-basis: 344px;
+        }
+    }
+    &__btn {
+        font-size: 18px;
+        line-height: 21px;
+        text-decoration-line: underline;
+        border: 0;
+        background-color: #fff;
+        color: #590d56;
+        align-self: flex-end;
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 320px) {
+    .features {
+        display: none;
+    }
+}

@@ -1,25 +1,27 @@
 header {
     position: relative;
     z-index: 2;
+    margin-top: 28px;
     .header {
         &__wrap {
             display: flex;
             justify-content: space-between;
         }
         &__left {
-            margin-top: 31px;
+            margin-top: 3px;
         }
         &__right {
             display: flex;
             position: relative;
+            flex: 0 1 260px;
             flex-direction: row-reverse;
             .search {
-                margin-top: 28px;
-                margin-right: 58.46px;
+                // margin-right: 58.46px;
+                flex-grow: 1;
             }
             .shops {
-                margin-top: 28px;
-                margin-right: 44.09px;
+                // margin-right: 44.09px;
+                flex-grow: 1;
             }
         }
         &__nav {
@@ -30,7 +32,7 @@ header {
             transition: ease-in-out .5s;
         }
         &__menu {
-            margin-top: 32.17px;
+            margin-top: 4.17px;
             cursor: pointer;
         }
     }
@@ -45,7 +47,7 @@ header {
     }
     &__close {
         position: absolute;
-        top: -183px;
+        top: -214px;
         right: 152px;
         cursor: pointer;
     }
