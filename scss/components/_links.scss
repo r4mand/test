@@ -1,4 +1,4 @@
-.btn {
+.link {
     font-size: 18px;
     line-height: 21px;
     border-radius: 33.5px;
@@ -8,15 +8,15 @@
     align-self: end;
     min-width: 263px;
     padding: 20.71px 0px 25.29px 0px;
-    &-white {
+    &_white {
         color: #fff;
         border: 1px solid #fff;
     }
-    &-purple {
-        color: #47093E;
-        border: 1px solid #47093E;
+    &_purple {
+        color: #47093e;
+        border: 1px solid #47093e;
         &:hover {
-            background: #590D56;
+            background: #590d56;
             border-radius: 90px;
             color: #fff;
         }
@@ -24,15 +24,15 @@
 }
 
 @media (max-width: 320px) {
-    .btn {
+    .link {
         font-size: 14px;
         line-height: 16px;
-        color: #5B0E58;
-        border: 1px solid #5B0E58;
+        color: #5b0e58;
+        border: 1px solid #5b0e58;
         min-width: 132px;
         padding: 10.51px 0 7.49px 0;
         &:hover {
-            background: #590D56;
+            background: #590d56;
             border-radius: 90px;
             color: #fff;
         }

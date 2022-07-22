@@ -38,7 +38,7 @@ ul {
     padding-right: 15px;
   }
 }
-.btn {
+.link {
   font-size: 18px;
   line-height: 21px;
   border-radius: 33.5px;
@@ -49,31 +49,31 @@ ul {
   min-width: 263px;
   padding: 20.71px 0px 25.29px 0px;
 }
-.btn-white {
+.link_white {
   color: #fff;
   border: 1px solid #fff;
 }
-.btn-purple {
-  color: #47093E;
-  border: 1px solid #47093E;
+.link_purple {
+  color: #47093e;
+  border: 1px solid #47093e;
 }
-.btn-purple:hover {
-  background: #590D56;
+.link_purple:hover {
+  background: #590d56;
   border-radius: 90px;
   color: #fff;
 }
 
 @media (max-width: 320px) {
-  .btn {
+  .link {
     font-size: 14px;
     line-height: 16px;
-    color: #5B0E58;
-    border: 1px solid #5B0E58;
+    color: #5b0e58;
+    border: 1px solid #5b0e58;
     min-width: 132px;
     padding: 10.51px 0 7.49px 0;
   }
-  .btn:hover {
-    background: #590D56;
+  .link:hover {
+    background: #590d56;
     border-radius: 90px;
     color: #fff;
   }
@@ -309,7 +309,7 @@ footer .footer__socials > a:not(:last-child) {
   font-family: "Merriweather", serif;
   font-size: 55px;
   line-height: 100%;
-  margin-bottom: 215px;
+  min-height: 435px;
 }
 .about__btn {
   display: flex;
@@ -432,23 +432,28 @@ footer .footer__socials > a:not(:last-child) {
 .features {
   padding-top: 103px;
 }
-.features__top {
+.features__columns {
   position: relative;
   display: flex;
   justify-content: space-between;
   min-height: 195px;
   align-items: flex-start;
 }
-.features__top__group {
+.features__columns .info {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.features__column {
   display: flex;
 }
-.features__top__group:not(:nth-child(3)) {
+.features__column:not(:nth-child(3)) {
   max-width: 262px;
 }
-.features__top__group:nth-child(3) {
+.features__column:nth-child(3) {
   max-width: 360px;
 }
-.features__top__group > p {
+.features__column > p {
   font-family: Merriweather;
   font-size: 16px;
   line-height: 154.8%;
@@ -456,13 +461,8 @@ footer .footer__socials > a:not(:last-child) {
   align-self: center;
   margin-left: 30px;
 }
-.features__top__group > p:not(:last-child) {
+.features__column > p:not(:last-child) {
   max-width: 166px;
-}
-.features__top .info {
-  position: absolute;
-  top: 30px;
-  right: 20px;
 }
 .features__bottom {
   display: flex;
